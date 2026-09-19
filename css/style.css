@@ -1261,7 +1261,7 @@ p {
   }
 
   .hero__image {
-    right: -10px;
+    right: 0;
     width: 270px;
   }
 
