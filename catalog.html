@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f9faff">
+  <meta name="description" content="Каталог блюд SimpleFood: бургеры, пицца, сэндвичи и другие блюда с доставкой.">
+  <title>Каталог блюд — SimpleFood</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a class="logo" href="index.html" aria-label="SimpleFood — на главную">
+        <img class="logo__image" src="assets/icons/logo.svg" width="197" height="31" alt="SimpleFood">
+      </a>
+
+      <nav class="navigation" id="mobile-menu" aria-label="Основная навигация">
+        <ul class="navigation__list">
+          <li><a class="navigation__link" href="index.html">Главная</a></li>
+          <li><a class="navigation__link" href="index.html#popular">Блюда</a></li>
+          <li><a class="navigation__link" href="index.html#restaurants">Рестораны</a></li>
+          <li><a class="navigation__link" href="index.html#reviews">Отзывы</a></li>
+          <li><a class="navigation__link navigation__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-switch" type="button" aria-label="Включить тёмную тему" aria-pressed="false">
+          <span class="theme-switch__icon" aria-hidden="true">☀</span>
+          <span class="theme-switch__track"><span class="theme-switch__thumb"></span></span>
+          <span class="theme-switch__icon" aria-hidden="true">☾</span>
+        </button>
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro page-intro--compact">
+      <div class="container">
+        <p class="breadcrumbs"><a href="index.html">Главная</a><span aria-hidden="true">/</span> Каталог</p>
+        <h1 class="page-intro__title">Каталог блюд</h1>
+        <p class="page-intro__text">Выберите блюдо для быстрого и вкусного заказа.</p>
+      </div>
+    </section>
+
+    <section class="catalog" aria-labelledby="catalog-categories-title">
+      <div class="container">
+        <h2 class="section-title catalog__title" id="catalog-categories-title">Выберите категорию</h2>
+        <ul class="catalog__categories" aria-label="Категории блюд">
+          <li><button class="catalog__category catalog__category--active" type="button" aria-pressed="true">Бургеры</button></li>
+          <li><button class="catalog__category" type="button" aria-pressed="false">Пицца</button></li>
+          <li><button class="catalog__category" type="button" aria-pressed="false">Сэндвичи</button></li>
+          <li><button class="catalog__category" type="button" aria-pressed="false">Азиатская кухня</button></li>
+          <li><button class="catalog__category" type="button" aria-pressed="false">Напитки</button></li>
+        </ul>
+
+        <ul class="catalog__grid" id="product-list">
+          <li>
+            <article class="catalog-card">
+              <img class="catalog-card__image" src="assets/images/products/cheeseburger.jpg" width="140" height="140" alt="Чизбургер с листьями салата">
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title">Чизбургер с салатом</h3>
+                <p class="catalog-card__description">Сочная говяжья котлета, сыр чеддер, свежий салат и фирменный соус.</p>
+                <div class="catalog-card__details"><span>280 г</span><strong>160 грн.</strong></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="catalog-card">
+              <img class="catalog-card__image" src="assets/images/products/beef-burger.jpg" width="140" height="140" alt="Бифбургер с говяжьей котлетой">
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title">Бифбургер</h3>
+                <p class="catalog-card__description">Говяжья котлета на гриле, томаты, маринованный лук и горчичный соус.</p>
+                <div class="catalog-card__details"><span>310 г</span><strong>190 грн.</strong></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="catalog-card">
+              <img class="catalog-card__image" src="assets/images/products/royal-burger.jpg" width="140" height="140" alt="Королевский чизбургер">
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title">Королевский чизбургер</h3>
+                <p class="catalog-card__description">Две котлеты, двойная порция сыра, хрустящие огурцы и соус барбекю.</p>
+                <div class="catalog-card__details"><span>390 г</span><strong>260 грн.</strong></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="catalog-card">
+              <img class="catalog-card__image" src="assets/images/products/black-burger.jpg" width="140" height="140" alt="Чёрный гамбургер">
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title">Чёрный гамбургер</h3>
+                <p class="catalog-card__description">Пряная булочка, говяжья котлета, карамелизированный лук и сыр.</p>
+                <div class="catalog-card__details"><span>300 г</span><strong>199 грн.</strong></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="catalog-card">
+              <img class="catalog-card__image" src="assets/images/products/chicken-burger.jpg" width="140" height="140" alt="Бургер с куриной котлетой">
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title">Чикен бургер</h3>
+                <p class="catalog-card__description">Хрустящее куриное филе, салат, томаты и нежный сливочный соус.</p>
+                <div class="catalog-card__details"><span>270 г</span><strong>180 грн.</strong></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="catalog-card">
+              <img class="catalog-card__image" src="assets/images/products/beef-burger.jpg" width="140" height="140" alt="Бургер барбекю с беконом">
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title">Бургер BBQ</h3>
+                <p class="catalog-card__description">Котлета на гриле, копчёный бекон, сыр, луковые кольца и соус BBQ.</p>
+                <div class="catalog-card__details"><span>350 г</span><strong>230 грн.</strong></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="catalog-card">
+              <img class="catalog-card__image" src="assets/images/products/black-burger.jpg" width="140" height="140" alt="Острый бургер с перцем">
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title">Острый бургер</h3>
+                <p class="catalog-card__description">Говяжья котлета, перец халапеньо, сыр и пикантный томатный соус.</p>
+                <div class="catalog-card__details"><span>320 г</span><strong>220 грн.</strong></div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="catalog-card">
+              <img class="catalog-card__image" src="assets/images/products/cheeseburger.jpg" width="140" height="140" alt="Овощной бургер">
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title">Овощной бургер</h3>
+                <p class="catalog-card__description">Овощная котлета, свежий салат, томаты, огурцы и соус с зеленью.</p>
+                <div class="catalog-card__details"><span>260 г</span><strong>170 грн.</strong></div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__additional-card">
+            <article class="catalog-card">
+              <img class="catalog-card__image" src="assets/images/products/royal-burger.jpg" width="140" height="140" alt="Двойной чизбургер">
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title">Двойной чизбургер</h3>
+                <p class="catalog-card__description">Две говяжьи котлеты, три ломтика сыра, огурцы и фирменный соус.</p>
+                <div class="catalog-card__details"><span>420 г</span><strong>290 грн.</strong></div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__additional-card">
+            <article class="catalog-card">
+              <img class="catalog-card__image" src="assets/images/products/chicken-burger.jpg" width="140" height="140" alt="Хрустящий куриный бургер">
+              <div class="catalog-card__content">
+                <h3 class="catalog-card__title">Криспи чикен</h3>
+                <p class="catalog-card__description">Куриное филе в хрустящей панировке, сыр, салат и чесночный соус.</p>
+                <div class="catalog-card__details"><span>300 г</span><strong>210 грн.</strong></div>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <button class="button catalog__more" type="button" aria-controls="product-list">Показать ещё</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__content">
+      <div class="footer__about">
+        <a class="logo" href="index.html" aria-label="SimpleFood — на главную">
+          <img class="logo__image" src="assets/icons/logo.svg" width="197" height="31" alt="SimpleFood">
+        </a>
+        <p>Быстрая доставка любимых блюд из ресторанов вашего города.</p>
+      </div>
+
+      <nav class="footer__navigation" aria-label="Навигация в подвале">
+        <h2 class="footer__title">Навигация</h2>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="index.html#reviews">Отзывы</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contacts">
+        <h2 class="footer__title">Контакты</h2>
+        <address>
+          <ul class="footer__list">
+            <li><a href="https://maps.google.com/?q=Тараса+Шевченко+1" target="_blank" rel="noopener noreferrer">ул. Т. Шевченко, 1</a></li>
+            <li><a href="tel:+380501112233">+38&nbsp;(050)&nbsp;111&#8209;22&#8209;33</a></li>
+            <li><a href="mailto:support@sfood.com">support@sfood.com</a></li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="footer__resources">
+        <h2 class="footer__title">Полезные ссылки</h2>
+        <ul class="footer__list">
+          <li><a href="https://github.com/YessetHumanMan" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://rs.school/" target="_blank" rel="noopener noreferrer">RS School</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2026 SimpleFood</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
