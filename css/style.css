@@ -65,6 +65,7 @@ body {
   font-family: "Rubik", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5;
+  transition: color 0.25s ease, background-color 0.25s ease;
 }
 
 main {
@@ -115,6 +116,7 @@ p {
   z-index: 10;
   background-color: var(--color-background);
   border-bottom: 1px solid transparent;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .header__container {
@@ -356,7 +358,7 @@ p {
   border: 1px solid var(--color-border);
   border-radius: 8px;
   text-align: center;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .product-card:hover {
@@ -471,7 +473,7 @@ p {
   background-color: var(--color-surface);
   border-radius: 10px;
   box-shadow: var(--shadow);
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .restaurant-card:hover {
@@ -711,6 +713,7 @@ p {
 .mobile-app {
   padding-block: 80px;
   background-color: var(--color-surface);
+  transition: background-color 0.25s ease;
 }
 
 .mobile-app__container {
@@ -886,7 +889,7 @@ p {
   border: 1px solid var(--color-border);
   border-radius: 10px;
   box-shadow: 0 3px 12px rgb(0 0 0 / 5%);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .catalog-card:hover {
@@ -948,6 +951,15 @@ p {
   padding-top: 60px;
   background-color: var(--color-surface);
   border-top: 1px solid var(--color-border);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+[data-theme="dark"] .logo__image {
+  filter: brightness(0) invert(1);
+}
+
+[data-theme="dark"] .benefits__item img {
+  filter: brightness(0) invert(1);
 }
 
 .footer__content {
