@@ -455,6 +455,150 @@ p {
   flex-shrink: 0;
 }
 
+.restaurants {
+  padding-block: 80px 100px;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.restaurant-card {
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.restaurant-card:hover {
+  box-shadow: 0 8px 24px rgb(0 0 0 / 14%);
+  transform: translateY(-4px);
+}
+
+.restaurant-card__image {
+  width: 100%;
+  aspect-ratio: 37 / 30;
+  object-fit: cover;
+}
+
+.restaurant-card__content {
+  padding: 18px 20px 22px;
+}
+
+.restaurant-card__title {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.restaurant-card__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.restaurant-card__hours {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-muted);
+  font-size: 18px;
+}
+
+.restaurant-card__hours img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.72;
+}
+
+.restaurant-card__link {
+  width: 58px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: var(--color-accent);
+  border-radius: 18px 18px 0 18px;
+  transition: background-color 0.25s ease, border-radius 0.25s ease;
+}
+
+.restaurant-card__link:hover {
+  background-color: var(--color-accent-hover);
+  border-radius: 18px;
+}
+
+.restaurant-card__link:focus-visible,
+.mobile-app__stores a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.restaurant-card__link img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.mobile-app {
+  padding-block: 80px;
+  background-color: var(--color-surface);
+}
+
+.mobile-app__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.mobile-app__content {
+  max-width: 480px;
+}
+
+.mobile-app__title {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.mobile-app__text {
+  margin-bottom: 30px;
+  color: var(--color-muted);
+}
+
+.mobile-app__stores {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.mobile-app__stores a {
+  display: block;
+  border-radius: 6px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-app__stores a:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.mobile-app__image {
+  width: min(50%, 570px);
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+[data-theme="dark"] .restaurant-card__hours img {
+  filter: brightness(0) invert(1);
+}
+
 .page-intro {
   min-height: 420px;
   padding-block: 100px;
@@ -622,6 +766,15 @@ p {
     font-size: 18px;
   }
 
+  .restaurant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .mobile-app__container {
+    gap: 35px;
+  }
+
   .footer__content {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -698,6 +851,23 @@ p {
 
   .benefits__title {
     text-align: left;
+  }
+
+  .restaurants,
+  .mobile-app {
+    padding-block: 60px;
+  }
+
+  .mobile-app__container {
+    flex-direction: column;
+  }
+
+  .mobile-app__content {
+    max-width: 620px;
+  }
+
+  .mobile-app__image {
+    width: min(100%, 570px);
   }
 
   .page-intro {
@@ -822,6 +992,32 @@ p {
   .benefits__item img {
     width: 30px;
     height: 30px;
+  }
+
+  .restaurants,
+  .mobile-app {
+    padding-block: 45px;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .restaurant-card__title {
+    font-size: 22px;
+  }
+
+  .restaurant-card__hours {
+    font-size: 16px;
+  }
+
+  .mobile-app__stores {
+    gap: 14px;
+  }
+
+  .mobile-app__image {
+    border-radius: 8px;
   }
 
   .page-intro {
