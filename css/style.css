@@ -1262,7 +1262,11 @@ p {
     margin-bottom: 28px;
   }
 
-  .category-list {
+  .category-list,
+  .catalog__categories {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    padding-bottom: 0;
     gap: 10px;
   }
 
