@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SimpleFood — сервис быстрой доставки любимых блюд из ресторанов города.">
+  <title>SimpleFood — доставка еды</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a class="logo" href="index.html" aria-label="SimpleFood — на главную">
+        <img class="logo__image" src="assets/icons/logo.svg" width="197" height="31" alt="SimpleFood">
+      </a>
+
+      <nav class="navigation" id="mobile-menu" aria-label="Основная навигация">
+        <ul class="navigation__list">
+          <li><a class="navigation__link navigation__link--active" href="index.html" aria-current="page">Главная</a></li>
+          <li><a class="navigation__link" href="#popular">Блюда</a></li>
+          <li><a class="navigation__link" href="#restaurants">Рестораны</a></li>
+          <li><a class="navigation__link" href="#reviews">Отзывы</a></li>
+          <li><a class="navigation__link" href="catalog.html">Каталог</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-switch" type="button" aria-label="Включить тёмную тему" aria-pressed="false">
+          <span class="theme-switch__icon" aria-hidden="true">☀</span>
+          <span class="theme-switch__track"><span class="theme-switch__thumb"></span></span>
+          <span class="theme-switch__icon" aria-hidden="true">☾</span>
+        </button>
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <div class="container">
+        <h1 class="page-intro__title">Доставка вкусной еды прямо к вам</h1>
+        <p class="page-intro__text">Выбирайте любимые блюда и заказывайте быструю доставку из ресторанов города.</p>
+        <a class="button" href="catalog.html">Перейти в каталог</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="container footer__content">
+      <div class="footer__about">
+        <a class="logo" href="index.html" aria-label="SimpleFood — на главную">
+          <img class="logo__image" src="assets/icons/logo.svg" width="197" height="31" alt="SimpleFood">
+        </a>
+        <p>Быстрая доставка любимых блюд из ресторанов вашего города.</p>
+      </div>
+
+      <nav class="footer__navigation" aria-label="Навигация в подвале">
+        <h2 class="footer__title">Навигация</h2>
+        <ul class="footer__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contacts">
+        <h2 class="footer__title">Контакты</h2>
+        <address>
+          <ul class="footer__list">
+            <li><a href="https://maps.google.com/?q=Тараса+Шевченко+1" target="_blank" rel="noopener noreferrer">ул. Т. Шевченко, 1</a></li>
+            <li><a href="tel:+380501112233">+38&nbsp;(050)&nbsp;111&#8209;22&#8209;33</a></li>
+            <li><a href="mailto:support@sfood.com">support@sfood.com</a></li>
+          </ul>
+        </address>
+      </div>
+
+      <div class="footer__resources">
+        <h2 class="footer__title">Полезные ссылки</h2>
+        <ul class="footer__list">
+          <li><a href="https://github.com/YessetHumanMan" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://rs.school/" target="_blank" rel="noopener noreferrer">RS School</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2026 SimpleFood</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
