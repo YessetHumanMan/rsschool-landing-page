@@ -546,6 +546,168 @@ p {
   filter: brightness(0) invert(1);
 }
 
+.reviews {
+  padding-block: 80px 100px;
+}
+
+.reviews__carousel {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.reviews__viewport {
+  overflow: hidden;
+}
+
+.reviews__track {
+  display: grid;
+}
+
+.reviews__slide {
+  display: none;
+}
+
+.reviews__slide--active {
+  display: block;
+}
+
+.review {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(45px, 8vw, 90px);
+}
+
+.review__avatar {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
+.review__avatar--initials {
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--color-accent), #ffb18f);
+  font-size: 96px;
+  font-weight: 500;
+}
+
+.review__content {
+  position: relative;
+  padding-inline: 24px;
+}
+
+.review__quote {
+  position: absolute;
+  top: -14px;
+  left: -24px;
+  width: 38px;
+  height: 38px;
+  color: var(--color-muted);
+  opacity: 0.35;
+}
+
+.review__text {
+  margin: 0 0 24px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.review__text p {
+  margin: 0;
+}
+
+.review__author {
+  margin-bottom: 6px;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.review__role {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.reviews__controls {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.reviews__arrow {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  background-color: transparent;
+  border: 2px solid var(--color-muted);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.reviews__arrow:hover {
+  color: #ffffff;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.reviews__arrow img {
+  width: 24px;
+  height: 24px;
+}
+
+.reviews__arrow:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.reviews__arrow--previous img {
+  transform: rotate(180deg);
+}
+
+.reviews__arrow:focus-visible,
+.reviews__dot:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.reviews__pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviews__dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background-color: var(--color-border);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.reviews__dot:hover,
+.reviews__dot--active {
+  background-color: var(--color-accent);
+  transform: scale(1.15);
+}
+
+[data-theme="dark"] .review__quote,
+[data-theme="dark"] .reviews__arrow img {
+  filter: brightness(0) invert(1);
+}
+
 .mobile-app {
   padding-block: 80px;
   background-color: var(--color-surface);
@@ -854,8 +1016,23 @@ p {
   }
 
   .restaurants,
+  .reviews,
   .mobile-app {
     padding-block: 60px;
+  }
+
+  .review {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 45px;
+  }
+
+  .review__avatar {
+    width: 240px;
+    height: 240px;
+  }
+
+  .review__avatar--initials {
+    font-size: 76px;
   }
 
   .mobile-app__container {
@@ -995,6 +1172,7 @@ p {
   }
 
   .restaurants,
+  .reviews,
   .mobile-app {
     padding-block: 45px;
   }
@@ -1010,6 +1188,43 @@ p {
 
   .restaurant-card__hours {
     font-size: 16px;
+  }
+
+  .review {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .review__avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .review__avatar--initials {
+    font-size: 58px;
+  }
+
+  .review__content {
+    padding-inline: 22px;
+  }
+
+  .review__quote {
+    left: -2px;
+  }
+
+  .review__text {
+    font-size: 15px;
+  }
+
+  .reviews__controls {
+    margin-top: 28px;
+    gap: 18px;
+  }
+
+  .reviews__arrow {
+    width: 38px;
+    height: 38px;
   }
 
   .mobile-app__stores {
